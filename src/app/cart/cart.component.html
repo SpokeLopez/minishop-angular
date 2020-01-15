@@ -1,0 +1,37 @@
+<h3>Carrito de compras</h3>
+
+<div class="cart-item" *ngFor="let item of items">
+  <span>{{ item.name }}</span>
+  <span>{{ item.price | currency }}</span>
+</div>
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+ 
+  <div>
+    <label for="nombre">
+      Nombre:
+    </label>
+    <input id="Nombre" type="text" formControlName="nombre" autocomplete="off">
+  </div>
+
+  <div>
+    <label for="direccion">
+      Dirección
+    </label>
+    <textarea id="direccion" cols="25" rows="4" formControlName="direccion"></textarea>
+  </div>
+
+    <div>
+    <label for="telefono">
+      Telefono de contacto 
+    </label>
+    <input id="telefono" type="number" formControlName="telefono" autocomplete="off">
+  </div>
+
+  <button class="button" type="submit">Confirmar</button>
+
+</form>
+
+<p>
+  <a routerLink="/shipping">Consultar precios de envio</a>
+</p>

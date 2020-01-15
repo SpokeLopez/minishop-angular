@@ -1,0 +1,14 @@
+[
+  {
+    "type": "Recibelo esta noche",
+    "price": 250
+  },
+  {
+    "type": "Recibelo en 2 días",
+    "price": 100
+  },
+  {
+    "type": "Postal",
+    "price": 45
+  }
+]
